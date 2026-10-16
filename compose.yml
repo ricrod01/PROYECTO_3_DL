@@ -1,0 +1,31 @@
+
+services:
+  ml:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: text-to-sql-ml:1.0
+    container_name: text_to_sql_ml
+
+    gpus: all
+
+    # Compartir la carpeta del proyecto con Docker.
+    volumes:
+      - .:/workspace
+      - hf_cache:/root/.cache/huggingface
+
+    # Directorio desde donde se ejecutará Python.
+    working_dir: /workspace/scripts
+
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TOKENIZERS_PARALLELISM=false
+
+    stdin_open: true
+    tty: true
+
+    command: sleep infinity
+
+volumes:
+  hf_cache:
