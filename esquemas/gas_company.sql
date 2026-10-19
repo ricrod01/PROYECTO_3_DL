@@ -1,0 +1,3 @@
+CREATE TABLE `company` (`Company_ID` DECIMAL(18,2), `Rank` DECIMAL(18,2), `Company` VARCHAR(100), `Headquarters` VARCHAR(100), `Main_Industry` VARCHAR(100), `Sales_billion` DECIMAL(18,2), `Profits_billion` DECIMAL(18,2), `Assets_billion` DECIMAL(18,2), `Market_Value` DECIMAL(18,2));
+CREATE TABLE `gas_station` (`Station_ID` DECIMAL(18,2), `Open_Year` DECIMAL(18,2), `Location` VARCHAR(100), `Manager_Name` VARCHAR(100), `Vice_Manager_Name` VARCHAR(100), `Representative_Name` VARCHAR(100));
+CREATE TABLE `station_company` (`Station_ID` DECIMAL(18,2), `Company_ID` DECIMAL(18,2), `Rank_of_the_Year` DECIMAL(18,2));

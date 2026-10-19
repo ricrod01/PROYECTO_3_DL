@@ -1,0 +1,11 @@
+CREATE TABLE `Ref_Address_Types` (`address_type_code` VARCHAR(100), `address_type_description` VARCHAR(100));
+CREATE TABLE `Ref_Detention_Type` (`detention_type_code` VARCHAR(100), `detention_type_description` VARCHAR(100));
+CREATE TABLE `Ref_Incident_Type` (`incident_type_code` VARCHAR(100), `incident_type_description` VARCHAR(100));
+CREATE TABLE `Addresses` (`address_id` DECIMAL(18,2), `line_1` VARCHAR(100), `line_2` VARCHAR(100), `line_3` VARCHAR(100), `city` VARCHAR(100), `zip_postcode` VARCHAR(100), `state_province_county` VARCHAR(100), `country` VARCHAR(100), `other_address_details` VARCHAR(100));
+CREATE TABLE `Students` (`student_id` DECIMAL(18,2), `address_id` DECIMAL(18,2), `first_name` VARCHAR(100), `middle_name` VARCHAR(100), `last_name` VARCHAR(100), `cell_mobile_number` VARCHAR(100), `email_address` VARCHAR(100), `date_first_rental` DATETIME, `date_left_university` DATETIME, `other_student_details` VARCHAR(100));
+CREATE TABLE `Teachers` (`teacher_id` DECIMAL(18,2), `address_id` DECIMAL(18,2), `first_name` VARCHAR(100), `middle_name` VARCHAR(100), `last_name` VARCHAR(100), `gender` VARCHAR(100), `cell_mobile_number` VARCHAR(100), `email_address` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Assessment_Notes` (`notes_id` DECIMAL(18,2), `student_id` DECIMAL(18,2), `teacher_id` DECIMAL(18,2), `date_of_notes` DATETIME, `text_of_notes` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Behavior_Incident` (`incident_id` DECIMAL(18,2), `incident_type_code` VARCHAR(100), `student_id` DECIMAL(18,2), `date_incident_start` DATETIME, `date_incident_end` DATETIME, `incident_summary` VARCHAR(100), `recommendations` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Detention` (`detention_id` DECIMAL(18,2), `detention_type_code` VARCHAR(100), `teacher_id` DECIMAL(18,2), `datetime_detention_start` DATETIME, `datetime_detention_end` DATETIME, `detention_summary` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Student_Addresses` (`student_id` DECIMAL(18,2), `address_id` DECIMAL(18,2), `date_address_from` DATETIME, `date_address_to` DATETIME, `monthly_rental` DECIMAL(18,2), `other_details` VARCHAR(100));
+CREATE TABLE `Students_in_Detention` (`student_id` DECIMAL(18,2), `detention_id` DECIMAL(18,2), `incident_id` DECIMAL(18,2));

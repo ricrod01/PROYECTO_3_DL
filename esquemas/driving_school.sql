@@ -1,0 +1,6 @@
+CREATE TABLE `Addresses` (`address_id` DECIMAL(18,2), `line_1_number_building` VARCHAR(100), `city` VARCHAR(100), `zip_postcode` VARCHAR(100), `state_province_county` VARCHAR(100), `country` VARCHAR(100));
+CREATE TABLE `Staff` (`staff_id` DECIMAL(18,2), `staff_address_id` DECIMAL(18,2), `nickname` VARCHAR(100), `first_name` VARCHAR(100), `middle_name` VARCHAR(100), `last_name` VARCHAR(100), `date_of_birth` DATETIME, `date_joined_staff` DATETIME, `date_left_staff` DATETIME);
+CREATE TABLE `Vehicles` (`vehicle_id` DECIMAL(18,2), `vehicle_details` VARCHAR(100));
+CREATE TABLE `Customers` (`customer_id` DECIMAL(18,2), `customer_address_id` DECIMAL(18,2), `customer_status_code` VARCHAR(100), `date_became_customer` DATETIME, `date_of_birth` DATETIME, `first_name` VARCHAR(100), `last_name` VARCHAR(100), `amount_outstanding` DECIMAL(18,2), `email_address` VARCHAR(100), `phone_number` VARCHAR(100), `cell_mobile_phone_number` VARCHAR(100));
+CREATE TABLE `Customer_Payments` (`customer_id` DECIMAL(18,2), `datetime_payment` DATETIME, `payment_method_code` VARCHAR(100), `amount_payment` DECIMAL(18,2));
+CREATE TABLE `Lessons` (`lesson_id` DECIMAL(18,2), `customer_id` DECIMAL(18,2), `lesson_status_code` VARCHAR(100), `staff_id` DECIMAL(18,2), `vehicle_id` DECIMAL(18,2), `lesson_date` DATETIME, `lesson_time` VARCHAR(100), `price` DECIMAL(18,2));

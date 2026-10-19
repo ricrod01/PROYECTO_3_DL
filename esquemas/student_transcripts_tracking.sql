@@ -1,0 +1,11 @@
+CREATE TABLE `Addresses` (`address_id` DECIMAL(18,2), `line_1` VARCHAR(100), `line_2` VARCHAR(100), `line_3` VARCHAR(100), `city` VARCHAR(100), `zip_postcode` VARCHAR(100), `state_province_county` VARCHAR(100), `country` VARCHAR(100), `other_address_details` VARCHAR(100));
+CREATE TABLE `Courses` (`course_id` DECIMAL(18,2), `course_name` VARCHAR(100), `course_description` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Departments` (`department_id` DECIMAL(18,2), `department_name` VARCHAR(100), `department_description` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Degree_Programs` (`degree_program_id` DECIMAL(18,2), `department_id` DECIMAL(18,2), `degree_summary_name` VARCHAR(100), `degree_summary_description` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Sections` (`section_id` DECIMAL(18,2), `course_id` DECIMAL(18,2), `section_name` VARCHAR(100), `section_description` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Semesters` (`semester_id` DECIMAL(18,2), `semester_name` VARCHAR(100), `semester_description` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Students` (`student_id` DECIMAL(18,2), `current_address_id` DECIMAL(18,2), `permanent_address_id` DECIMAL(18,2), `first_name` VARCHAR(100), `middle_name` VARCHAR(100), `last_name` VARCHAR(100), `cell_mobile_number` VARCHAR(100), `email_address` VARCHAR(100), `ssn` VARCHAR(100), `date_first_registered` DATETIME, `date_left` DATETIME, `other_student_details` VARCHAR(100));
+CREATE TABLE `Student_Enrolment` (`student_enrolment_id` DECIMAL(18,2), `degree_program_id` DECIMAL(18,2), `semester_id` DECIMAL(18,2), `student_id` DECIMAL(18,2), `other_details` VARCHAR(100));
+CREATE TABLE `Student_Enrolment_Courses` (`student_course_id` DECIMAL(18,2), `course_id` DECIMAL(18,2), `student_enrolment_id` DECIMAL(18,2));
+CREATE TABLE `Transcripts` (`transcript_id` DECIMAL(18,2), `transcript_date` DATETIME, `other_details` VARCHAR(100));
+CREATE TABLE `Transcript_Contents` (`student_course_id` DECIMAL(18,2), `transcript_id` DECIMAL(18,2));

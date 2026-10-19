@@ -1,0 +1,3 @@
+CREATE TABLE `chip_model` (`Model_name` VARCHAR(100), `Launch_year` DECIMAL(18,2), `RAM_MiB` DECIMAL(18,2), `ROM_MiB` DECIMAL(18,2), `Slots` VARCHAR(100), `WiFi` VARCHAR(100), `Bluetooth` VARCHAR(100));
+CREATE TABLE `screen_mode` (`Graphics_mode` DECIMAL(18,2), `Char_cells` VARCHAR(100), `Pixels` VARCHAR(100), `Hardware_colours` DECIMAL(18,2), `used_kb` DECIMAL(18,2), `map` VARCHAR(100), `Type` VARCHAR(100));
+CREATE TABLE `phone` (`Company_name` VARCHAR(100), `Hardware_Model_name` VARCHAR(100), `Accreditation_type` VARCHAR(100), `Accreditation_level` VARCHAR(100), `Date` VARCHAR(100), `chip_model` VARCHAR(100), `screen_mode` VARCHAR(100));

@@ -1,0 +1,12 @@
+CREATE TABLE `Document_Types` (`document_type_code` VARCHAR(100), `document_description` VARCHAR(100));
+CREATE TABLE `Documents` (`document_id` DECIMAL(18,2), `document_type_code` VARCHAR(100), `grant_id` DECIMAL(18,2), `sent_date` DATETIME, `response_received_date` DATETIME, `other_details` VARCHAR(100));
+CREATE TABLE `Grants` (`grant_id` DECIMAL(18,2), `organisation_id` DECIMAL(18,2), `grant_amount` DECIMAL(18,2), `grant_start_date` DATETIME, `grant_end_date` DATETIME, `other_details` VARCHAR(100));
+CREATE TABLE `Organisation_Types` (`organisation_type` VARCHAR(100), `organisation_type_description` VARCHAR(100));
+CREATE TABLE `Organisations` (`organisation_id` DECIMAL(18,2), `organisation_type` VARCHAR(100), `organisation_details` VARCHAR(100));
+CREATE TABLE `Project_Outcomes` (`project_id` DECIMAL(18,2), `outcome_code` VARCHAR(100), `outcome_details` VARCHAR(100));
+CREATE TABLE `Project_Staff` (`staff_id` DECIMAL(18,2), `project_id` DECIMAL(18,2), `role_code` VARCHAR(100), `date_from` DATETIME, `date_to` DATETIME, `other_details` VARCHAR(100));
+CREATE TABLE `Projects` (`project_id` DECIMAL(18,2), `organisation_id` DECIMAL(18,2), `project_details` VARCHAR(100));
+CREATE TABLE `Research_Outcomes` (`outcome_code` VARCHAR(100), `outcome_description` VARCHAR(100));
+CREATE TABLE `Research_Staff` (`staff_id` DECIMAL(18,2), `employer_organisation_id` DECIMAL(18,2), `staff_details` VARCHAR(100));
+CREATE TABLE `Staff_Roles` (`role_code` VARCHAR(100), `role_description` VARCHAR(100));
+CREATE TABLE `Tasks` (`task_id` DECIMAL(18,2), `project_id` DECIMAL(18,2), `task_details` VARCHAR(100), `eg Agree Objectives` VARCHAR(100));

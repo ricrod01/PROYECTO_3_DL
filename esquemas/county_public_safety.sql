@@ -1,0 +1,2 @@
+CREATE TABLE `county_public_safety` (`County_ID` DECIMAL(18,2), `Name` VARCHAR(100), `Population` DECIMAL(18,2), `Police_officers` DECIMAL(18,2), `Residents_per_officer` DECIMAL(18,2), `Case_burden` DECIMAL(18,2), `Crime_rate` DECIMAL(18,2), `Police_force` VARCHAR(100), `Location` VARCHAR(100));
+CREATE TABLE `city` (`City_ID` DECIMAL(18,2), `County_ID` DECIMAL(18,2), `Name` VARCHAR(100), `White` DECIMAL(18,2), `Black` DECIMAL(18,2), `Amerindian` DECIMAL(18,2), `Asian` DECIMAL(18,2), `Multiracial` DECIMAL(18,2), `Hispanic` DECIMAL(18,2));

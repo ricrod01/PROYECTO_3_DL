@@ -1,0 +1,3 @@
+CREATE TABLE `book_club` (`book_club_id` DECIMAL(18,2), `Year` DECIMAL(18,2), `Author_or_Editor` VARCHAR(100), `Book_Title` VARCHAR(100), `Publisher` VARCHAR(100), `Category` VARCHAR(100), `Result` VARCHAR(100));
+CREATE TABLE `movie` (`movie_id` DECIMAL(18,2), `Title` VARCHAR(100), `Year` DECIMAL(18,2), `Director` VARCHAR(100), `Budget_million` DECIMAL(18,2), `Gross_worldwide` DECIMAL(18,2));
+CREATE TABLE `culture_company` (`Company_name` VARCHAR(100), `Type` VARCHAR(100), `Incorporated_in` VARCHAR(100), `Group_Equity_Shareholding` DECIMAL(18,2), `book_club_id` VARCHAR(100), `movie_id` VARCHAR(100));

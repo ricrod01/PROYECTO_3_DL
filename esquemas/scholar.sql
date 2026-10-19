@@ -1,0 +1,10 @@
+CREATE TABLE `venue` (`venueId` DECIMAL(18,2), `venueName` VARCHAR(100));
+CREATE TABLE `author` (`authorId` DECIMAL(18,2), `authorName` VARCHAR(100));
+CREATE TABLE `dataset` (`datasetId` DECIMAL(18,2), `datasetName` VARCHAR(100));
+CREATE TABLE `journal` (`journalId` DECIMAL(18,2), `journalName` VARCHAR(100));
+CREATE TABLE `keyphrase` (`keyphraseId` DECIMAL(18,2), `keyphraseName` VARCHAR(100));
+CREATE TABLE `paper` (`paperId` DECIMAL(18,2), `title` VARCHAR(100), `venueId` DECIMAL(18,2), `year` DECIMAL(18,2), `numCiting` DECIMAL(18,2), `numCitedBy` DECIMAL(18,2), `journalId` DECIMAL(18,2));
+CREATE TABLE `cite` (`citingPaperId` DECIMAL(18,2), `citedPaperId` DECIMAL(18,2));
+CREATE TABLE `paperDataset` (`paperId` DECIMAL(18,2), `datasetId` DECIMAL(18,2));
+CREATE TABLE `paperKeyphrase` (`paperId` DECIMAL(18,2), `keyphraseId` DECIMAL(18,2));
+CREATE TABLE `writes` (`paperId` DECIMAL(18,2), `authorId` DECIMAL(18,2));

@@ -1,0 +1,13 @@
+CREATE TABLE `circuits` (`circuitId` DECIMAL(18,2), `circuitRef` VARCHAR(100), `name` VARCHAR(100), `location` VARCHAR(100), `country` VARCHAR(100), `lat` DECIMAL(18,2), `lng` DECIMAL(18,2), `alt` DECIMAL(18,2), `url` VARCHAR(100));
+CREATE TABLE `races` (`raceId` DECIMAL(18,2), `year` DECIMAL(18,2), `round` DECIMAL(18,2), `circuitId` DECIMAL(18,2), `name` VARCHAR(100), `date` VARCHAR(100), `time` VARCHAR(100), `url` VARCHAR(100));
+CREATE TABLE `drivers` (`driverId` DECIMAL(18,2), `driverRef` VARCHAR(100), `number` DECIMAL(18,2), `code` VARCHAR(100), `forename` VARCHAR(100), `surname` VARCHAR(100), `dob` VARCHAR(100), `nationality` VARCHAR(100), `url` VARCHAR(100));
+CREATE TABLE `status` (`statusId` DECIMAL(18,2), `status` VARCHAR(100));
+CREATE TABLE `seasons` (`year` DECIMAL(18,2), `url` VARCHAR(100));
+CREATE TABLE `constructors` (`constructorId` DECIMAL(18,2), `constructorRef` VARCHAR(100), `name` VARCHAR(100), `nationality` VARCHAR(100), `url` VARCHAR(100));
+CREATE TABLE `constructorStandings` (`constructorStandingsId` DECIMAL(18,2), `raceId` DECIMAL(18,2), `constructorId` DECIMAL(18,2), `points` DECIMAL(18,2), `position` DECIMAL(18,2), `positionText` VARCHAR(100), `wins` DECIMAL(18,2));
+CREATE TABLE `results` (`resultId` DECIMAL(18,2), `raceId` DECIMAL(18,2), `driverId` DECIMAL(18,2), `constructorId` DECIMAL(18,2), `number` DECIMAL(18,2), `grid` DECIMAL(18,2), `position` DECIMAL(18,2), `positionText` VARCHAR(100), `positionOrder` DECIMAL(18,2), `points` DECIMAL(18,2), `laps` DECIMAL(18,2), `time` VARCHAR(100), `milliseconds` DECIMAL(18,2), `fastestLap` DECIMAL(18,2), `rank` DECIMAL(18,2), `fastestLapTime` VARCHAR(100), `fastestLapSpeed` VARCHAR(100), `statusId` DECIMAL(18,2));
+CREATE TABLE `driverStandings` (`driverStandingsId` DECIMAL(18,2), `raceId` DECIMAL(18,2), `driverId` DECIMAL(18,2), `points` DECIMAL(18,2), `position` DECIMAL(18,2), `positionText` VARCHAR(100), `wins` DECIMAL(18,2));
+CREATE TABLE `constructorResults` (`constructorResultsId` DECIMAL(18,2), `raceId` DECIMAL(18,2), `constructorId` DECIMAL(18,2), `points` DECIMAL(18,2), `status` DECIMAL(18,2));
+CREATE TABLE `qualifying` (`qualifyId` DECIMAL(18,2), `raceId` DECIMAL(18,2), `driverId` DECIMAL(18,2), `constructorId` DECIMAL(18,2), `number` DECIMAL(18,2), `position` DECIMAL(18,2), `q1` VARCHAR(100), `q2` VARCHAR(100), `q3` VARCHAR(100));
+CREATE TABLE `pitStops` (`raceId` DECIMAL(18,2), `driverId` DECIMAL(18,2), `stop` DECIMAL(18,2), `lap` DECIMAL(18,2), `time` VARCHAR(100), `duration` VARCHAR(100), `milliseconds` DECIMAL(18,2));
+CREATE TABLE `lapTimes` (`raceId` DECIMAL(18,2), `driverId` DECIMAL(18,2), `lap` DECIMAL(18,2), `position` DECIMAL(18,2), `time` VARCHAR(100), `milliseconds` DECIMAL(18,2));

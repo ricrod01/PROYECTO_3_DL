@@ -1,0 +1,3 @@
+CREATE TABLE `College` (`cName` VARCHAR(100), `state` VARCHAR(100), `enr` DECIMAL(18,2));
+CREATE TABLE `Player` (`pID` DECIMAL(18,2), `pName` VARCHAR(100), `yCard` VARCHAR(100), `HS` DECIMAL(18,2));
+CREATE TABLE `Tryout` (`pID` DECIMAL(18,2), `cName` VARCHAR(100), `pPos` VARCHAR(100), `decision` VARCHAR(100));

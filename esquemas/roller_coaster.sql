@@ -1,0 +1,2 @@
+CREATE TABLE `roller_coaster` (`Roller_Coaster_ID` DECIMAL(18,2), `Name` VARCHAR(100), `Park` VARCHAR(100), `Country_ID` DECIMAL(18,2), `Length` DECIMAL(18,2), `Height` DECIMAL(18,2), `Speed` VARCHAR(100), `Opened` VARCHAR(100), `Status` VARCHAR(100));
+CREATE TABLE `country` (`Country_ID` DECIMAL(18,2), `Name` VARCHAR(100), `Population` DECIMAL(18,2), `Area` DECIMAL(18,2), `Languages` VARCHAR(100));

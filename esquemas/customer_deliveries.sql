@@ -1,0 +1,13 @@
+CREATE TABLE `Products` (`product_id` DECIMAL(18,2), `product_name` VARCHAR(100), `product_price` DECIMAL(18,2), `product_description` VARCHAR(100));
+CREATE TABLE `Addresses` (`address_id` DECIMAL(18,2), `address_details` VARCHAR(100), `city` VARCHAR(100), `zip_postcode` VARCHAR(100), `state_province_county` VARCHAR(100), `country` VARCHAR(100));
+CREATE TABLE `Customers` (`customer_id` DECIMAL(18,2), `payment_method` VARCHAR(100), `customer_name` VARCHAR(100), `customer_phone` VARCHAR(100), `customer_email` VARCHAR(100), `date_became_customer` DATETIME);
+CREATE TABLE `Regular_Orders` (`regular_order_id` DECIMAL(18,2), `distributer_id` DECIMAL(18,2));
+CREATE TABLE `Regular_Order_Products` (`regular_order_id` DECIMAL(18,2), `product_id` DECIMAL(18,2));
+CREATE TABLE `Actual_Orders` (`actual_order_id` DECIMAL(18,2), `order_status_code` VARCHAR(100), `regular_order_id` DECIMAL(18,2), `actual_order_date` DATETIME);
+CREATE TABLE `Actual_Order_Products` (`actual_order_id` DECIMAL(18,2), `product_id` DECIMAL(18,2));
+CREATE TABLE `Customer_Addresses` (`customer_id` DECIMAL(18,2), `address_id` DECIMAL(18,2), `date_from` DATETIME, `address_type` VARCHAR(100), `date_to` DATETIME);
+CREATE TABLE `Delivery_Routes` (`route_id` DECIMAL(18,2), `route_name` VARCHAR(100), `other_route_details` VARCHAR(100));
+CREATE TABLE `Delivery_Route_Locations` (`location_code` VARCHAR(100), `route_id` DECIMAL(18,2), `location_address_id` DECIMAL(18,2), `location_name` VARCHAR(100));
+CREATE TABLE `Trucks` (`truck_id` DECIMAL(18,2), `truck_licence_number` VARCHAR(100), `truck_details` VARCHAR(100));
+CREATE TABLE `Employees` (`employee_id` DECIMAL(18,2), `employee_address_id` DECIMAL(18,2), `employee_name` VARCHAR(100), `employee_phone` VARCHAR(100));
+CREATE TABLE `Order_Deliveries` (`location_code` VARCHAR(100), `actual_order_id` DECIMAL(18,2), `delivery_status_code` VARCHAR(100), `driver_employee_id` DECIMAL(18,2), `truck_id` DECIMAL(18,2), `delivery_date` DATETIME);

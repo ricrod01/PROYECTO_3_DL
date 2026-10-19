@@ -1,0 +1,2 @@
+CREATE TABLE `Rooms` (`RoomId` VARCHAR(100), `roomName` VARCHAR(100), `beds` DECIMAL(18,2), `bedType` VARCHAR(100), `maxOccupancy` DECIMAL(18,2), `basePrice` DECIMAL(18,2), `decor` VARCHAR(100));
+CREATE TABLE `Reservations` (`Code` DECIMAL(18,2), `Room` VARCHAR(100), `CheckIn` VARCHAR(100), `CheckOut` VARCHAR(100), `Rate` DECIMAL(18,2), `LastName` VARCHAR(100), `FirstName` VARCHAR(100), `Adults` DECIMAL(18,2), `Kids` DECIMAL(18,2));

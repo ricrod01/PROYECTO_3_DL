@@ -1,0 +1,14 @@
+CREATE TABLE `Third_Party_Companies` (`company_id` DECIMAL(18,2), `company_type` VARCHAR(100), `company_name` VARCHAR(100), `company_address` VARCHAR(100), `other_company_details` VARCHAR(100));
+CREATE TABLE `Maintenance_Contracts` (`maintenance_contract_id` DECIMAL(18,2), `maintenance_contract_company_id` DECIMAL(18,2), `contract_start_date` DATETIME, `contract_end_date` DATETIME, `other_contract_details` VARCHAR(100));
+CREATE TABLE `Parts` (`part_id` DECIMAL(18,2), `part_name` VARCHAR(100), `chargeable_yn` VARCHAR(100), `chargeable_amount` VARCHAR(100), `other_part_details` VARCHAR(100));
+CREATE TABLE `Skills` (`skill_id` DECIMAL(18,2), `skill_code` VARCHAR(100), `skill_description` VARCHAR(100));
+CREATE TABLE `Staff` (`staff_id` DECIMAL(18,2), `staff_name` VARCHAR(100), `gender` VARCHAR(100), `other_staff_details` VARCHAR(100));
+CREATE TABLE `Assets` (`asset_id` DECIMAL(18,2), `maintenance_contract_id` DECIMAL(18,2), `supplier_company_id` DECIMAL(18,2), `asset_details` VARCHAR(100), `asset_make` VARCHAR(100), `asset_model` VARCHAR(100), `asset_acquired_date` DATETIME, `asset_disposed_date` DATETIME, `other_asset_details` VARCHAR(100));
+CREATE TABLE `Asset_Parts` (`asset_id` DECIMAL(18,2), `part_id` DECIMAL(18,2));
+CREATE TABLE `Maintenance_Engineers` (`engineer_id` DECIMAL(18,2), `company_id` DECIMAL(18,2), `first_name` VARCHAR(100), `last_name` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Engineer_Skills` (`engineer_id` DECIMAL(18,2), `skill_id` DECIMAL(18,2));
+CREATE TABLE `Fault_Log` (`fault_log_entry_id` DECIMAL(18,2), `asset_id` DECIMAL(18,2), `recorded_by_staff_id` DECIMAL(18,2), `fault_log_entry_datetime` DATETIME, `fault_description` VARCHAR(100), `other_fault_details` VARCHAR(100));
+CREATE TABLE `Engineer_Visits` (`engineer_visit_id` DECIMAL(18,2), `contact_staff_id` DECIMAL(18,2), `engineer_id` DECIMAL(18,2), `fault_log_entry_id` DECIMAL(18,2), `fault_status` VARCHAR(100), `visit_start_datetime` DATETIME, `visit_end_datetime` DATETIME, `other_visit_details` VARCHAR(100));
+CREATE TABLE `Part_Faults` (`part_fault_id` DECIMAL(18,2), `part_id` DECIMAL(18,2), `fault_short_name` VARCHAR(100), `fault_description` VARCHAR(100), `other_fault_details` VARCHAR(100));
+CREATE TABLE `Fault_Log_Parts` (`fault_log_entry_id` DECIMAL(18,2), `part_fault_id` DECIMAL(18,2), `fault_status` VARCHAR(100));
+CREATE TABLE `Skills_Required_To_Fix` (`part_fault_id` DECIMAL(18,2), `skill_id` DECIMAL(18,2));

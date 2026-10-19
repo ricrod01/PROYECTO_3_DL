@@ -1,0 +1,12 @@
+CREATE TABLE `artists` (`id` DECIMAL(18,2), `name` VARCHAR(100));
+CREATE TABLE `sqlite_sequence` (`name` VARCHAR(100), `seq` VARCHAR(100));
+CREATE TABLE `albums` (`id` DECIMAL(18,2), `title` VARCHAR(100), `artist_id` DECIMAL(18,2));
+CREATE TABLE `employees` (`id` DECIMAL(18,2), `last_name` VARCHAR(100), `first_name` VARCHAR(100), `title` VARCHAR(100), `reports_to` DECIMAL(18,2), `birth_date` DATETIME, `hire_date` DATETIME, `address` VARCHAR(100), `city` VARCHAR(100), `state` VARCHAR(100), `country` VARCHAR(100), `postal_code` VARCHAR(100), `phone` VARCHAR(100), `fax` VARCHAR(100), `email` VARCHAR(100));
+CREATE TABLE `customers` (`id` DECIMAL(18,2), `first_name` VARCHAR(100), `last_name` VARCHAR(100), `company` VARCHAR(100), `address` VARCHAR(100), `city` VARCHAR(100), `state` VARCHAR(100), `country` VARCHAR(100), `postal_code` VARCHAR(100), `phone` VARCHAR(100), `fax` VARCHAR(100), `email` VARCHAR(100), `support_rep_id` DECIMAL(18,2));
+CREATE TABLE `genres` (`id` DECIMAL(18,2), `name` VARCHAR(100));
+CREATE TABLE `invoices` (`id` DECIMAL(18,2), `customer_id` DECIMAL(18,2), `invoice_date` DATETIME, `billing_address` VARCHAR(100), `billing_city` VARCHAR(100), `billing_state` VARCHAR(100), `billing_country` VARCHAR(100), `billing_postal_code` VARCHAR(100), `total` DECIMAL(18,2));
+CREATE TABLE `media_types` (`id` DECIMAL(18,2), `name` VARCHAR(100));
+CREATE TABLE `tracks` (`id` DECIMAL(18,2), `name` VARCHAR(100), `album_id` DECIMAL(18,2), `media_type_id` DECIMAL(18,2), `genre_id` DECIMAL(18,2), `composer` VARCHAR(100), `milliseconds` DECIMAL(18,2), `bytes` DECIMAL(18,2), `unit_price` DECIMAL(18,2));
+CREATE TABLE `invoice_lines` (`id` DECIMAL(18,2), `invoice_id` DECIMAL(18,2), `track_id` DECIMAL(18,2), `unit_price` DECIMAL(18,2), `quantity` DECIMAL(18,2));
+CREATE TABLE `playlists` (`id` DECIMAL(18,2), `name` VARCHAR(100));
+CREATE TABLE `playlist_tracks` (`playlist_id` DECIMAL(18,2), `track_id` DECIMAL(18,2));

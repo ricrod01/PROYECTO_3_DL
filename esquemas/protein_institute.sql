@@ -1,0 +1,3 @@
+CREATE TABLE `building` (`building_id` VARCHAR(100), `Name` VARCHAR(100), `Street_address` VARCHAR(100), `Years_as_tallest` VARCHAR(100), `Height_feet` DECIMAL(18,2), `Floors` DECIMAL(18,2));
+CREATE TABLE `Institution` (`Institution_id` VARCHAR(100), `Institution` VARCHAR(100), `Location` VARCHAR(100), `Founded` DECIMAL(18,2), `Type` VARCHAR(100), `Enrollment` DECIMAL(18,2), `Team` VARCHAR(100), `Primary_Conference` VARCHAR(100), `building_id` VARCHAR(100));
+CREATE TABLE `protein` (`common_name` VARCHAR(100), `protein_name` VARCHAR(100), `divergence_from_human_lineage` DECIMAL(18,2), `accession_number` VARCHAR(100), `sequence_length` DECIMAL(18,2), `sequence_identity_to_human_protein` VARCHAR(100), `Institution_id` VARCHAR(100));

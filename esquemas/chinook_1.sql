@@ -1,0 +1,11 @@
+CREATE TABLE `Album` (`AlbumId` DECIMAL(18,2), `Title` VARCHAR(100), `ArtistId` DECIMAL(18,2));
+CREATE TABLE `Artist` (`ArtistId` DECIMAL(18,2), `Name` VARCHAR(100));
+CREATE TABLE `Customer` (`CustomerId` DECIMAL(18,2), `FirstName` VARCHAR(100), `LastName` VARCHAR(100), `Company` VARCHAR(100), `Address` VARCHAR(100), `City` VARCHAR(100), `State` VARCHAR(100), `Country` VARCHAR(100), `PostalCode` VARCHAR(100), `Phone` VARCHAR(100), `Fax` VARCHAR(100), `Email` VARCHAR(100), `SupportRepId` DECIMAL(18,2));
+CREATE TABLE `Employee` (`EmployeeId` DECIMAL(18,2), `LastName` VARCHAR(100), `FirstName` VARCHAR(100), `Title` VARCHAR(100), `ReportsTo` DECIMAL(18,2), `BirthDate` DATETIME, `HireDate` DATETIME, `Address` VARCHAR(100), `City` VARCHAR(100), `State` VARCHAR(100), `Country` VARCHAR(100), `PostalCode` VARCHAR(100), `Phone` VARCHAR(100), `Fax` VARCHAR(100), `Email` VARCHAR(100));
+CREATE TABLE `Genre` (`GenreId` DECIMAL(18,2), `Name` VARCHAR(100));
+CREATE TABLE `Invoice` (`InvoiceId` DECIMAL(18,2), `CustomerId` DECIMAL(18,2), `InvoiceDate` DATETIME, `BillingAddress` VARCHAR(100), `BillingCity` VARCHAR(100), `BillingState` VARCHAR(100), `BillingCountry` VARCHAR(100), `BillingPostalCode` VARCHAR(100), `Total` DECIMAL(18,2));
+CREATE TABLE `InvoiceLine` (`InvoiceLineId` DECIMAL(18,2), `InvoiceId` DECIMAL(18,2), `TrackId` DECIMAL(18,2), `UnitPrice` DECIMAL(18,2), `Quantity` DECIMAL(18,2));
+CREATE TABLE `MediaType` (`MediaTypeId` DECIMAL(18,2), `Name` VARCHAR(100));
+CREATE TABLE `Playlist` (`PlaylistId` DECIMAL(18,2), `Name` VARCHAR(100));
+CREATE TABLE `PlaylistTrack` (`PlaylistId` DECIMAL(18,2), `TrackId` DECIMAL(18,2));
+CREATE TABLE `Track` (`TrackId` DECIMAL(18,2), `Name` VARCHAR(100), `AlbumId` DECIMAL(18,2), `MediaTypeId` DECIMAL(18,2), `GenreId` DECIMAL(18,2), `Composer` VARCHAR(100), `Milliseconds` DECIMAL(18,2), `Bytes` DECIMAL(18,2), `UnitPrice` DECIMAL(18,2));

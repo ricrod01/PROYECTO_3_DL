@@ -1,0 +1,11 @@
+CREATE TABLE `classroom` (`building` VARCHAR(100), `room_number` VARCHAR(100), `capacity` DECIMAL(18,2));
+CREATE TABLE `department` (`dept_name` VARCHAR(100), `building` VARCHAR(100), `budget` DECIMAL(18,2));
+CREATE TABLE `course` (`course_id` VARCHAR(100), `title` VARCHAR(100), `dept_name` VARCHAR(100), `credits` DECIMAL(18,2));
+CREATE TABLE `instructor` (`ID` VARCHAR(100), `name` VARCHAR(100), `dept_name` VARCHAR(100), `salary` DECIMAL(18,2));
+CREATE TABLE `section` (`course_id` VARCHAR(100), `sec_id` VARCHAR(100), `semester` VARCHAR(100), `year` DECIMAL(18,2), `building` VARCHAR(100), `room_number` VARCHAR(100), `time_slot_id` VARCHAR(100));
+CREATE TABLE `teaches` (`ID` VARCHAR(100), `course_id` VARCHAR(100), `sec_id` VARCHAR(100), `semester` VARCHAR(100), `year` DECIMAL(18,2));
+CREATE TABLE `student` (`ID` VARCHAR(100), `name` VARCHAR(100), `dept_name` VARCHAR(100), `tot_cred` DECIMAL(18,2));
+CREATE TABLE `takes` (`ID` VARCHAR(100), `course_id` VARCHAR(100), `sec_id` VARCHAR(100), `semester` VARCHAR(100), `year` DECIMAL(18,2), `grade` VARCHAR(100));
+CREATE TABLE `advisor` (`s_ID` VARCHAR(100), `i_ID` VARCHAR(100));
+CREATE TABLE `time_slot` (`time_slot_id` VARCHAR(100), `day` VARCHAR(100), `start_hr` DECIMAL(18,2), `start_min` DECIMAL(18,2), `end_hr` DECIMAL(18,2), `end_min` DECIMAL(18,2));
+CREATE TABLE `prereq` (`course_id` VARCHAR(100), `prereq_id` VARCHAR(100));

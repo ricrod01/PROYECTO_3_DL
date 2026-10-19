@@ -1,0 +1,15 @@
+CREATE TABLE `author` (`aid` DECIMAL(18,2), `homepage` VARCHAR(100), `name` VARCHAR(100), `oid` DECIMAL(18,2));
+CREATE TABLE `conference` (`cid` DECIMAL(18,2), `homepage` VARCHAR(100), `name` VARCHAR(100));
+CREATE TABLE `domain` (`did` DECIMAL(18,2), `name` VARCHAR(100));
+CREATE TABLE `domain_author` (`aid` DECIMAL(18,2), `did` DECIMAL(18,2));
+CREATE TABLE `domain_conference` (`cid` DECIMAL(18,2), `did` DECIMAL(18,2));
+CREATE TABLE `journal` (`homepage` VARCHAR(100), `jid` DECIMAL(18,2), `name` VARCHAR(100));
+CREATE TABLE `domain_journal` (`did` DECIMAL(18,2), `jid` DECIMAL(18,2));
+CREATE TABLE `keyword` (`keyword` VARCHAR(100), `kid` DECIMAL(18,2));
+CREATE TABLE `domain_keyword` (`did` DECIMAL(18,2), `kid` DECIMAL(18,2));
+CREATE TABLE `publication` (`abstract` VARCHAR(100), `cid` VARCHAR(100), `citation_num` DECIMAL(18,2), `jid` DECIMAL(18,2), `pid` DECIMAL(18,2), `reference_num` DECIMAL(18,2), `title` VARCHAR(100), `year` DECIMAL(18,2));
+CREATE TABLE `domain_publication` (`did` DECIMAL(18,2), `pid` DECIMAL(18,2));
+CREATE TABLE `organization` (`continent` VARCHAR(100), `homepage` VARCHAR(100), `name` VARCHAR(100), `oid` DECIMAL(18,2));
+CREATE TABLE `publication_keyword` (`pid` DECIMAL(18,2), `kid` DECIMAL(18,2));
+CREATE TABLE `writes` (`aid` DECIMAL(18,2), `pid` DECIMAL(18,2));
+CREATE TABLE `cite` (`cited` DECIMAL(18,2), `citing` DECIMAL(18,2));

@@ -1,0 +1,16 @@
+CREATE TABLE `Ref_Hotel_Star_Ratings` (`star_rating_code` VARCHAR(100), `star_rating_description` VARCHAR(100));
+CREATE TABLE `Locations` (`Location_ID` DECIMAL(18,2), `Location_Name` VARCHAR(100), `Address` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Ref_Attraction_Types` (`Attraction_Type_Code` VARCHAR(100), `Attraction_Type_Description` VARCHAR(100));
+CREATE TABLE `Visitors` (`Tourist_ID` DECIMAL(18,2), `Tourist_Details` VARCHAR(100));
+CREATE TABLE `Features` (`Feature_ID` DECIMAL(18,2), `Feature_Details` VARCHAR(100));
+CREATE TABLE `Hotels` (`hotel_id` DECIMAL(18,2), `star_rating_code` VARCHAR(100), `pets_allowed_yn` VARCHAR(100), `price_range` DECIMAL(18,2), `other_hotel_details` VARCHAR(100));
+CREATE TABLE `Tourist_Attractions` (`Tourist_Attraction_ID` DECIMAL(18,2), `Attraction_Type_Code` VARCHAR(100), `Location_ID` DECIMAL(18,2), `How_to_Get_There` VARCHAR(100), `Name` VARCHAR(100), `Description` VARCHAR(100), `Opening_Hours` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Street_Markets` (`Market_ID` DECIMAL(18,2), `Market_Details` VARCHAR(100));
+CREATE TABLE `Shops` (`Shop_ID` DECIMAL(18,2), `Shop_Details` VARCHAR(100));
+CREATE TABLE `Museums` (`Museum_ID` DECIMAL(18,2), `Museum_Details` VARCHAR(100));
+CREATE TABLE `Royal_Family` (`Royal_Family_ID` DECIMAL(18,2), `Royal_Family_Details` VARCHAR(100));
+CREATE TABLE `Theme_Parks` (`Theme_Park_ID` DECIMAL(18,2), `Theme_Park_Details` VARCHAR(100));
+CREATE TABLE `Visits` (`Visit_ID` DECIMAL(18,2), `Tourist_Attraction_ID` DECIMAL(18,2), `Tourist_ID` DECIMAL(18,2), `Visit_Date` DATETIME, `Visit_Details` VARCHAR(100));
+CREATE TABLE `Photos` (`Photo_ID` DECIMAL(18,2), `Tourist_Attraction_ID` DECIMAL(18,2), `Name` VARCHAR(100), `Description` VARCHAR(100), `Filename` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Staff` (`Staff_ID` DECIMAL(18,2), `Tourist_Attraction_ID` DECIMAL(18,2), `Name` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Tourist_Attraction_Features` (`Tourist_Attraction_ID` DECIMAL(18,2), `Feature_ID` DECIMAL(18,2));

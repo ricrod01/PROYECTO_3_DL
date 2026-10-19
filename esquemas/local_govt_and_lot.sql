@@ -1,0 +1,11 @@
+CREATE TABLE `Customers` (`customer_id` DECIMAL(18,2), `customer_details` VARCHAR(100));
+CREATE TABLE `Properties` (`property_id` DECIMAL(18,2), `property_type_code` VARCHAR(100), `property_address` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Residents` (`resident_id` DECIMAL(18,2), `property_id` DECIMAL(18,2), `date_moved_in` DATETIME, `date_moved_out` DATETIME, `other_details` VARCHAR(100));
+CREATE TABLE `Organizations` (`organization_id` DECIMAL(18,2), `parent_organization_id` DECIMAL(18,2), `organization_details` VARCHAR(100));
+CREATE TABLE `Services` (`service_id` DECIMAL(18,2), `organization_id` DECIMAL(18,2), `service_type_code` VARCHAR(100), `service_details` VARCHAR(100));
+CREATE TABLE `Residents_Services` (`resident_id` DECIMAL(18,2), `service_id` DECIMAL(18,2), `date_moved_in` DATETIME, `property_id` DECIMAL(18,2), `date_requested` DATETIME, `date_provided` DATETIME, `other_details` VARCHAR(100));
+CREATE TABLE `Things` (`thing_id` DECIMAL(18,2), `organization_id` DECIMAL(18,2), `Type_of_Thing_Code` VARCHAR(100), `service_type_code` VARCHAR(100), `service_details` VARCHAR(100));
+CREATE TABLE `Customer_Events` (`Customer_Event_ID` DECIMAL(18,2), `customer_id` DECIMAL(18,2), `date_moved_in` DATETIME, `property_id` DECIMAL(18,2), `resident_id` DECIMAL(18,2), `thing_id` DECIMAL(18,2));
+CREATE TABLE `Customer_Event_Notes` (`Customer_Event_Note_ID` DECIMAL(18,2), `Customer_Event_ID` DECIMAL(18,2), `service_type_code` VARCHAR(100), `resident_id` DECIMAL(18,2), `property_id` DECIMAL(18,2), `date_moved_in` DATETIME);
+CREATE TABLE `Timed_Status_of_Things` (`thing_id` DECIMAL(18,2), `Date_and_Date` DATETIME, `Status_of_Thing_Code` VARCHAR(100));
+CREATE TABLE `Timed_Locations_of_Things` (`thing_id` DECIMAL(18,2), `Date_and_Time` DATETIME, `Location_Code` VARCHAR(100));

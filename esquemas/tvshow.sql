@@ -1,0 +1,3 @@
+CREATE TABLE `TV_Channel` (`id` VARCHAR(100), `series_name` VARCHAR(100), `Country` VARCHAR(100), `Language` VARCHAR(100), `Content` VARCHAR(100), `Pixel_aspect_ratio_PAR` VARCHAR(100), `Hight_definition_TV` VARCHAR(100), `Pay_per_view_PPV` VARCHAR(100), `Package_Option` VARCHAR(100));
+CREATE TABLE `TV_series` (`id` DECIMAL(18,2), `Episode` VARCHAR(100), `Air_Date` VARCHAR(100), `Rating` VARCHAR(100), `Share` DECIMAL(18,2), `18_49_Rating_Share` VARCHAR(100), `Viewers_m` VARCHAR(100), `Weekly_Rank` DECIMAL(18,2), `Channel` VARCHAR(100));
+CREATE TABLE `Cartoon` (`id` DECIMAL(18,2), `Title` VARCHAR(100), `Directed_by` VARCHAR(100), `Written_by` VARCHAR(100), `Original_air_date` VARCHAR(100), `Production_code` DECIMAL(18,2), `Channel` VARCHAR(100));

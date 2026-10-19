@@ -1,0 +1,16 @@
+CREATE TABLE `actor` (`actor_id` DECIMAL(18,2), `first_name` VARCHAR(100), `last_name` VARCHAR(100), `last_update` DATETIME);
+CREATE TABLE `address` (`address_id` DECIMAL(18,2), `address` VARCHAR(100), `address2` VARCHAR(100), `district` VARCHAR(100), `city_id` DECIMAL(18,2), `postal_code` VARCHAR(100), `phone` VARCHAR(100), `last_update` DATETIME);
+CREATE TABLE `category` (`category_id` DECIMAL(18,2), `name` VARCHAR(100), `last_update` DATETIME);
+CREATE TABLE `city` (`city_id` DECIMAL(18,2), `city` VARCHAR(100), `country_id` DECIMAL(18,2), `last_update` DATETIME);
+CREATE TABLE `country` (`country_id` DECIMAL(18,2), `country` VARCHAR(100), `last_update` DATETIME);
+CREATE TABLE `customer` (`customer_id` DECIMAL(18,2), `store_id` DECIMAL(18,2), `first_name` VARCHAR(100), `last_name` VARCHAR(100), `email` VARCHAR(100), `address_id` DECIMAL(18,2), `active` BOOLEAN, `create_date` DATETIME, `last_update` DATETIME);
+CREATE TABLE `film` (`film_id` DECIMAL(18,2), `title` VARCHAR(100), `description` VARCHAR(100), `release_year` DATETIME, `language_id` DECIMAL(18,2), `original_language_id` DECIMAL(18,2), `rental_duration` DECIMAL(18,2), `rental_rate` DECIMAL(18,2), `length` DECIMAL(18,2), `replacement_cost` DECIMAL(18,2), `rating` VARCHAR(100), `special_features` VARCHAR(100), `last_update` DATETIME);
+CREATE TABLE `film_actor` (`actor_id` DECIMAL(18,2), `film_id` DECIMAL(18,2), `last_update` DATETIME);
+CREATE TABLE `film_category` (`film_id` DECIMAL(18,2), `category_id` DECIMAL(18,2), `last_update` DATETIME);
+CREATE TABLE `film_text` (`film_id` DECIMAL(18,2), `title` VARCHAR(100), `description` VARCHAR(100));
+CREATE TABLE `inventory` (`inventory_id` DECIMAL(18,2), `film_id` DECIMAL(18,2), `store_id` DECIMAL(18,2), `last_update` DATETIME);
+CREATE TABLE `language` (`language_id` DECIMAL(18,2), `name` VARCHAR(100), `last_update` DATETIME);
+CREATE TABLE `payment` (`payment_id` DECIMAL(18,2), `customer_id` DECIMAL(18,2), `staff_id` DECIMAL(18,2), `rental_id` DECIMAL(18,2), `amount` DECIMAL(18,2), `payment_date` DATETIME, `last_update` DATETIME);
+CREATE TABLE `rental` (`rental_id` DECIMAL(18,2), `rental_date` DATETIME, `inventory_id` DECIMAL(18,2), `customer_id` DECIMAL(18,2), `return_date` DATETIME, `staff_id` DECIMAL(18,2), `last_update` DATETIME);
+CREATE TABLE `staff` (`staff_id` DECIMAL(18,2), `first_name` VARCHAR(100), `last_name` VARCHAR(100), `address_id` DECIMAL(18,2), `picture` VARCHAR(100), `email` VARCHAR(100), `store_id` DECIMAL(18,2), `active` BOOLEAN, `username` VARCHAR(100), `password` VARCHAR(100), `last_update` DATETIME);
+CREATE TABLE `store` (`store_id` DECIMAL(18,2), `manager_staff_id` DECIMAL(18,2), `address_id` DECIMAL(18,2), `last_update` DATETIME);

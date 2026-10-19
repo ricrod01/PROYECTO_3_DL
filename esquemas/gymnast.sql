@@ -1,0 +1,2 @@
+CREATE TABLE `gymnast` (`Gymnast_ID` DECIMAL(18,2), `Floor_Exercise_Points` DECIMAL(18,2), `Pommel_Horse_Points` DECIMAL(18,2), `Rings_Points` DECIMAL(18,2), `Vault_Points` DECIMAL(18,2), `Parallel_Bars_Points` DECIMAL(18,2), `Horizontal_Bar_Points` DECIMAL(18,2), `Total_Points` DECIMAL(18,2));
+CREATE TABLE `people` (`People_ID` DECIMAL(18,2), `Name` VARCHAR(100), `Age` DECIMAL(18,2), `Height` DECIMAL(18,2), `Hometown` VARCHAR(100));

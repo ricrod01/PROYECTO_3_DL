@@ -13,3 +13,5 @@ matplotlib==3.10.1
 
 PyMySQL==1.1.1
 cryptography==44.0.3
+ipykernel
+mysql-connector-python>=9.2,<10

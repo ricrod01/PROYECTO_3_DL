@@ -1,0 +1,11 @@
+CREATE TABLE `Ref_Document_Types` (`document_type_code` VARCHAR(100), `document_type_description` VARCHAR(100));
+CREATE TABLE `Roles` (`role_code` VARCHAR(100), `role_description` VARCHAR(100));
+CREATE TABLE `Addresses` (`address_id` DECIMAL(18,2), `address_details` VARCHAR(100));
+CREATE TABLE `Ref_Document_Status` (`document_status_code` VARCHAR(100), `document_status_description` VARCHAR(100));
+CREATE TABLE `Ref_Shipping_Agents` (`shipping_agent_code` VARCHAR(100), `shipping_agent_name` VARCHAR(100), `shipping_agent_description` VARCHAR(100));
+CREATE TABLE `Documents` (`document_id` DECIMAL(18,2), `document_status_code` VARCHAR(100), `document_type_code` VARCHAR(100), `shipping_agent_code` VARCHAR(100), `receipt_date` DATETIME, `receipt_number` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Employees` (`employee_id` DECIMAL(18,2), `role_code` VARCHAR(100), `employee_name` VARCHAR(100), `other_details` VARCHAR(100));
+CREATE TABLE `Document_Drafts` (`document_id` DECIMAL(18,2), `draft_number` DECIMAL(18,2), `draft_details` VARCHAR(100));
+CREATE TABLE `Draft_Copies` (`document_id` DECIMAL(18,2), `draft_number` DECIMAL(18,2), `copy_number` DECIMAL(18,2));
+CREATE TABLE `Circulation_History` (`document_id` DECIMAL(18,2), `draft_number` DECIMAL(18,2), `copy_number` DECIMAL(18,2), `employee_id` DECIMAL(18,2));
+CREATE TABLE `Documents_Mailed` (`document_id` DECIMAL(18,2), `mailed_to_address_id` DECIMAL(18,2), `mailing_date` DATETIME);

@@ -1,0 +1,5 @@
+CREATE TABLE `Attribute_Definitions` (`attribute_id` DECIMAL(18,2), `attribute_name` VARCHAR(100), `attribute_data_type` VARCHAR(100));
+CREATE TABLE `Catalogs` (`catalog_id` DECIMAL(18,2), `catalog_name` VARCHAR(100), `catalog_publisher` VARCHAR(100), `date_of_publication` DATETIME, `date_of_latest_revision` DATETIME);
+CREATE TABLE `Catalog_Structure` (`catalog_level_number` DECIMAL(18,2), `catalog_id` DECIMAL(18,2), `catalog_level_name` VARCHAR(100));
+CREATE TABLE `Catalog_Contents` (`catalog_entry_id` DECIMAL(18,2), `catalog_level_number` DECIMAL(18,2), `parent_entry_id` DECIMAL(18,2), `previous_entry_id` DECIMAL(18,2), `next_entry_id` DECIMAL(18,2), `catalog_entry_name` VARCHAR(100), `product_stock_number` VARCHAR(100), `price_in_dollars` DECIMAL(18,2), `price_in_euros` DECIMAL(18,2), `price_in_pounds` DECIMAL(18,2), `capacity` VARCHAR(100), `length` VARCHAR(100), `height` VARCHAR(100), `width` VARCHAR(100));
+CREATE TABLE `Catalog_Contents_Additional_Attributes` (`catalog_entry_id` DECIMAL(18,2), `catalog_level_number` DECIMAL(18,2), `attribute_id` DECIMAL(18,2), `attribute_value` VARCHAR(100));

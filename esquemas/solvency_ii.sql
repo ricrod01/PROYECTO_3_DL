@@ -1,0 +1,12 @@
+CREATE TABLE `Addresses` (`Address_ID` DECIMAL(18,2), `address_details` VARCHAR(100));
+CREATE TABLE `Locations` (`Location_ID` DECIMAL(18,2), `Other_Details` VARCHAR(100));
+CREATE TABLE `Products` (`Product_ID` DECIMAL(18,2), `Product_Type_Code` VARCHAR(100), `Product_Name` VARCHAR(100), `Product_Price` DECIMAL(18,2));
+CREATE TABLE `Parties` (`Party_ID` DECIMAL(18,2), `Party_Details` VARCHAR(100));
+CREATE TABLE `Assets` (`Asset_ID` DECIMAL(18,2), `Other_Details` VARCHAR(100));
+CREATE TABLE `Channels` (`Channel_ID` DECIMAL(18,2), `Other_Details` VARCHAR(100));
+CREATE TABLE `Finances` (`Finance_ID` DECIMAL(18,2), `Other_Details` VARCHAR(100));
+CREATE TABLE `Events` (`Event_ID` DECIMAL(18,2), `Address_ID` DECIMAL(18,2), `Channel_ID` DECIMAL(18,2), `Event_Type_Code` VARCHAR(100), `Finance_ID` DECIMAL(18,2), `Location_ID` DECIMAL(18,2));
+CREATE TABLE `Products_in_Events` (`Product_in_Event_ID` DECIMAL(18,2), `Event_ID` DECIMAL(18,2), `Product_ID` DECIMAL(18,2));
+CREATE TABLE `Parties_in_Events` (`Party_ID` DECIMAL(18,2), `Event_ID` DECIMAL(18,2), `Role_Code` VARCHAR(100));
+CREATE TABLE `Agreements` (`Document_ID` DECIMAL(18,2), `Event_ID` DECIMAL(18,2));
+CREATE TABLE `Assets_in_Events` (`Asset_ID` DECIMAL(18,2), `Event_ID` DECIMAL(18,2));

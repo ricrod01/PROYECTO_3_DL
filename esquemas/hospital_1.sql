@@ -1,0 +1,15 @@
+CREATE TABLE `Physician` (`EmployeeID` DECIMAL(18,2), `Name` VARCHAR(100), `Position` VARCHAR(100), `SSN` DECIMAL(18,2));
+CREATE TABLE `Department` (`DepartmentID` DECIMAL(18,2), `Name` VARCHAR(100), `Head` DECIMAL(18,2));
+CREATE TABLE `Affiliated_With` (`Physician` DECIMAL(18,2), `Department` DECIMAL(18,2), `PrimaryAffiliation` BOOLEAN);
+CREATE TABLE `Procedures` (`Code` DECIMAL(18,2), `Name` VARCHAR(100), `Cost` DECIMAL(18,2));
+CREATE TABLE `Trained_In` (`Physician` DECIMAL(18,2), `Treatment` DECIMAL(18,2), `CertificationDate` DATETIME, `CertificationExpires` DATETIME);
+CREATE TABLE `Patient` (`SSN` DECIMAL(18,2), `Name` VARCHAR(100), `Address` VARCHAR(100), `Phone` VARCHAR(100), `InsuranceID` DECIMAL(18,2), `PCP` DECIMAL(18,2));
+CREATE TABLE `Nurse` (`EmployeeID` DECIMAL(18,2), `Name` VARCHAR(100), `Position` VARCHAR(100), `Registered` BOOLEAN, `SSN` DECIMAL(18,2));
+CREATE TABLE `Appointment` (`AppointmentID` DECIMAL(18,2), `Patient` DECIMAL(18,2), `PrepNurse` DECIMAL(18,2), `Physician` DECIMAL(18,2), `Start` DATETIME, `End` DATETIME, `ExaminationRoom` VARCHAR(100));
+CREATE TABLE `Medication` (`Code` DECIMAL(18,2), `Name` VARCHAR(100), `Brand` VARCHAR(100), `Description` VARCHAR(100));
+CREATE TABLE `Prescribes` (`Physician` DECIMAL(18,2), `Patient` DECIMAL(18,2), `Medication` DECIMAL(18,2), `Date` DATETIME, `Appointment` DECIMAL(18,2), `Dose` VARCHAR(100));
+CREATE TABLE `Block` (`BlockFloor` DECIMAL(18,2), `BlockCode` DECIMAL(18,2));
+CREATE TABLE `Room` (`RoomNumber` DECIMAL(18,2), `RoomType` VARCHAR(100), `BlockFloor` DECIMAL(18,2), `BlockCode` DECIMAL(18,2), `Unavailable` BOOLEAN);
+CREATE TABLE `On_Call` (`Nurse` DECIMAL(18,2), `BlockFloor` DECIMAL(18,2), `BlockCode` DECIMAL(18,2), `OnCallStart` DATETIME, `OnCallEnd` DATETIME);
+CREATE TABLE `Stay` (`StayID` DECIMAL(18,2), `Patient` DECIMAL(18,2), `Room` DECIMAL(18,2), `StayStart` DATETIME, `StayEnd` DATETIME);
+CREATE TABLE `Undergoes` (`Patient` DECIMAL(18,2), `Procedures` DECIMAL(18,2), `Stay` DECIMAL(18,2), `DateUndergoes` DATETIME, `Physician` DECIMAL(18,2), `AssistingNurse` DECIMAL(18,2));

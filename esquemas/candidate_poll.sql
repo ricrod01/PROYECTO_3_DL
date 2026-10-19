@@ -1,0 +1,2 @@
+CREATE TABLE `candidate` (`Candidate_ID` DECIMAL(18,2), `People_ID` DECIMAL(18,2), `Poll_Source` VARCHAR(100), `Date` VARCHAR(100), `Support_rate` DECIMAL(18,2), `Consider_rate` DECIMAL(18,2), `Oppose_rate` DECIMAL(18,2), `Unsure_rate` DECIMAL(18,2));
+CREATE TABLE `people` (`People_ID` DECIMAL(18,2), `Sex` VARCHAR(100), `Name` VARCHAR(100), `Date_of_Birth` VARCHAR(100), `Height` DECIMAL(18,2), `Weight` DECIMAL(18,2));

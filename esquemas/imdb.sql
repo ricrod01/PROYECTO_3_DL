@@ -1,0 +1,16 @@
+CREATE TABLE `actor` (`aid` DECIMAL(18,2), `gender` VARCHAR(100), `name` VARCHAR(100), `nationality` VARCHAR(100), `birth_city` VARCHAR(100), `birth_year` DECIMAL(18,2));
+CREATE TABLE `copyright` (`id` DECIMAL(18,2), `msid` DECIMAL(18,2), `cid` DECIMAL(18,2));
+CREATE TABLE `cast` (`id` DECIMAL(18,2), `msid` DECIMAL(18,2), `aid` DECIMAL(18,2), `role` DECIMAL(18,2));
+CREATE TABLE `genre` (`gid` DECIMAL(18,2), `genre` VARCHAR(100));
+CREATE TABLE `classification` (`id` DECIMAL(18,2), `msid` DECIMAL(18,2), `gid` DECIMAL(18,2));
+CREATE TABLE `company` (`id` DECIMAL(18,2), `name` VARCHAR(100), `country_code` VARCHAR(100));
+CREATE TABLE `director` (`did` DECIMAL(18,2), `gender` VARCHAR(100), `name` VARCHAR(100), `nationality` VARCHAR(100), `birth_city` VARCHAR(100), `birth_year` DECIMAL(18,2));
+CREATE TABLE `producer` (`pid` DECIMAL(18,2), `gender` VARCHAR(100), `name` VARCHAR(100), `nationality` VARCHAR(100), `birth_city` VARCHAR(100), `birth_year` DECIMAL(18,2));
+CREATE TABLE `directed_by` (`id` DECIMAL(18,2), `msid` DECIMAL(18,2), `did` DECIMAL(18,2));
+CREATE TABLE `keyword` (`id` DECIMAL(18,2), `keyword` VARCHAR(100));
+CREATE TABLE `made_by` (`id` DECIMAL(18,2), `msid` DECIMAL(18,2), `pid` DECIMAL(18,2));
+CREATE TABLE `movie` (`mid` DECIMAL(18,2), `title` VARCHAR(100), `release_year` DECIMAL(18,2), `title_aka` VARCHAR(100), `budget` VARCHAR(100));
+CREATE TABLE `tags` (`id` DECIMAL(18,2), `msid` DECIMAL(18,2), `kid` DECIMAL(18,2));
+CREATE TABLE `tv_series` (`sid` DECIMAL(18,2), `title` VARCHAR(100), `release_year` DECIMAL(18,2), `num_of_seasons` DECIMAL(18,2), `num_of_episodes` DECIMAL(18,2), `title_aka` VARCHAR(100), `budget` VARCHAR(100));
+CREATE TABLE `writer` (`wid` DECIMAL(18,2), `gender` VARCHAR(100), `name` DECIMAL(18,2), `nationality` DECIMAL(18,2), `num_of_episodes` DECIMAL(18,2), `birth_city` VARCHAR(100), `birth_year` DECIMAL(18,2));
+CREATE TABLE `written_by` (`id` DECIMAL(18,2), `msid` DECIMAL(18,2), `wid` DECIMAL(18,2));

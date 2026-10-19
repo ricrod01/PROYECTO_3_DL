@@ -1,0 +1,18 @@
+CREATE TABLE `Ref_Payment_Methods` (`payment_method_code` VARCHAR(100), `payment_method_description` VARCHAR(100));
+CREATE TABLE `Ref_Service_Types` (`Service_Type_Code` VARCHAR(100), `Parent_Service_Type_Code` VARCHAR(100), `Service_Type_Description` VARCHAR(100));
+CREATE TABLE `Addresses` (`Address_ID` VARCHAR(100), `Line_1` VARCHAR(100), `Line_2` VARCHAR(100), `City_Town` VARCHAR(100), `State_County` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Products` (`Product_ID` VARCHAR(100), `Product_Name` VARCHAR(100), `Product_Price` DECIMAL(18,2), `Product_Description` VARCHAR(100), `Other_Product_Service_Details` VARCHAR(100));
+CREATE TABLE `Marketing_Regions` (`Marketing_Region_Code` VARCHAR(100), `Marketing_Region_Name` VARCHAR(100), `Marketing_Region_Descriptrion` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Clients` (`Client_ID` DECIMAL(18,2), `Address_ID` DECIMAL(18,2), `Customer_Email_Address` VARCHAR(100), `Customer_Name` VARCHAR(100), `Customer_Phone` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Drama_Workshop_Groups` (`Workshop_Group_ID` DECIMAL(18,2), `Address_ID` DECIMAL(18,2), `Currency_Code` VARCHAR(100), `Marketing_Region_Code` VARCHAR(100), `Store_Name` VARCHAR(100), `Store_Phone` VARCHAR(100), `Store_Email_Address` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Performers` (`Performer_ID` DECIMAL(18,2), `Address_ID` DECIMAL(18,2), `Customer_Name` VARCHAR(100), `Customer_Phone` VARCHAR(100), `Customer_Email_Address` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Customers` (`Customer_ID` VARCHAR(100), `Address_ID` DECIMAL(18,2), `Customer_Name` VARCHAR(100), `Customer_Phone` VARCHAR(100), `Customer_Email_Address` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Stores` (`Store_ID` VARCHAR(100), `Address_ID` DECIMAL(18,2), `Marketing_Region_Code` VARCHAR(100), `Store_Name` VARCHAR(100), `Store_Phone` VARCHAR(100), `Store_Email_Address` VARCHAR(100), `Other_Details` VARCHAR(100));
+CREATE TABLE `Bookings` (`Booking_ID` DECIMAL(18,2), `Customer_ID` DECIMAL(18,2), `Workshop_Group_ID` VARCHAR(100), `Status_Code` VARCHAR(100), `Store_ID` DECIMAL(18,2), `Order_Date` DATETIME, `Planned_Delivery_Date` DATETIME, `Actual_Delivery_Date` DATETIME, `Other_Order_Details` VARCHAR(100));
+CREATE TABLE `Performers_in_Bookings` (`Order_ID` DECIMAL(18,2), `Performer_ID` DECIMAL(18,2));
+CREATE TABLE `Customer_Orders` (`Order_ID` DECIMAL(18,2), `Customer_ID` DECIMAL(18,2), `Store_ID` DECIMAL(18,2), `Order_Date` DATETIME, `Planned_Delivery_Date` DATETIME, `Actual_Delivery_Date` DATETIME, `Other_Order_Details` VARCHAR(100));
+CREATE TABLE `Order_Items` (`Order_Item_ID` DECIMAL(18,2), `Order_ID` DECIMAL(18,2), `Product_ID` DECIMAL(18,2), `Order_Quantity` VARCHAR(100), `Other_Item_Details` VARCHAR(100));
+CREATE TABLE `Invoices` (`Invoice_ID` DECIMAL(18,2), `Order_ID` DECIMAL(18,2), `payment_method_code` VARCHAR(100), `Product_ID` DECIMAL(18,2), `Order_Quantity` VARCHAR(100), `Other_Item_Details` VARCHAR(100), `Order_Item_ID` DECIMAL(18,2));
+CREATE TABLE `Services` (`Service_ID` DECIMAL(18,2), `Service_Type_Code` VARCHAR(100), `Workshop_Group_ID` DECIMAL(18,2), `Product_Description` VARCHAR(100), `Product_Name` VARCHAR(100), `Product_Price` DECIMAL(18,2), `Other_Product_Service_Details` VARCHAR(100));
+CREATE TABLE `Bookings_Services` (`Order_ID` DECIMAL(18,2), `Product_ID` DECIMAL(18,2));
+CREATE TABLE `Invoice_Items` (`Invoice_Item_ID` DECIMAL(18,2), `Invoice_ID` DECIMAL(18,2), `Order_ID` DECIMAL(18,2), `Order_Item_ID` DECIMAL(18,2), `Product_ID` DECIMAL(18,2), `Order_Quantity` DECIMAL(18,2), `Other_Item_Details` VARCHAR(100));

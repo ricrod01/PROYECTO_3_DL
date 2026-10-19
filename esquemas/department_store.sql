@@ -1,0 +1,14 @@
+CREATE TABLE `Addresses` (`address_id` DECIMAL(18,2), `address_details` VARCHAR(100));
+CREATE TABLE `Staff` (`staff_id` DECIMAL(18,2), `staff_gender` VARCHAR(100), `staff_name` VARCHAR(100));
+CREATE TABLE `Suppliers` (`supplier_id` DECIMAL(18,2), `supplier_name` VARCHAR(100), `supplier_phone` VARCHAR(100));
+CREATE TABLE `Department_Store_Chain` (`dept_store_chain_id` DECIMAL(18,2), `dept_store_chain_name` VARCHAR(100));
+CREATE TABLE `Customers` (`customer_id` DECIMAL(18,2), `payment_method_code` VARCHAR(100), `customer_code` VARCHAR(100), `customer_name` VARCHAR(100), `customer_address` VARCHAR(100), `customer_phone` VARCHAR(100), `customer_email` VARCHAR(100));
+CREATE TABLE `Products` (`product_id` DECIMAL(18,2), `product_type_code` VARCHAR(100), `product_name` VARCHAR(100), `product_price` DECIMAL(18,2));
+CREATE TABLE `Supplier_Addresses` (`supplier_id` DECIMAL(18,2), `address_id` DECIMAL(18,2), `date_from` DATETIME, `date_to` DATETIME);
+CREATE TABLE `Customer_Addresses` (`customer_id` DECIMAL(18,2), `address_id` DECIMAL(18,2), `date_from` DATETIME, `date_to` DATETIME);
+CREATE TABLE `Customer_Orders` (`order_id` DECIMAL(18,2), `customer_id` DECIMAL(18,2), `order_status_code` VARCHAR(100), `order_date` DATETIME);
+CREATE TABLE `Department_Stores` (`dept_store_id` DECIMAL(18,2), `dept_store_chain_id` DECIMAL(18,2), `store_name` VARCHAR(100), `store_address` VARCHAR(100), `store_phone` VARCHAR(100), `store_email` VARCHAR(100));
+CREATE TABLE `Departments` (`department_id` DECIMAL(18,2), `dept_store_id` DECIMAL(18,2), `department_name` VARCHAR(100));
+CREATE TABLE `Order_Items` (`order_item_id` DECIMAL(18,2), `order_id` DECIMAL(18,2), `product_id` DECIMAL(18,2));
+CREATE TABLE `Product_Suppliers` (`product_id` DECIMAL(18,2), `supplier_id` DECIMAL(18,2), `date_supplied_from` DATETIME, `date_supplied_to` DATETIME, `total_amount_purchased` VARCHAR(100), `total_value_purchased` DECIMAL(18,2));
+CREATE TABLE `Staff_Department_Assignments` (`staff_id` DECIMAL(18,2), `department_id` DECIMAL(18,2), `date_assigned_from` DATETIME, `job_title_code` VARCHAR(100), `date_assigned_to` DATETIME);

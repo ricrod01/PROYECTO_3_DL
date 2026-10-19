@@ -1,0 +1,3 @@
+CREATE TABLE `School` (`School_id` VARCHAR(100), `School_name` VARCHAR(100), `Location` VARCHAR(100), `Mascot` VARCHAR(100), `Enrollment` DECIMAL(18,2), `IHSAA_Class` VARCHAR(100), `IHSAA_Football_Class` VARCHAR(100), `County` VARCHAR(100));
+CREATE TABLE `budget` (`School_id` DECIMAL(18,2), `Year` DECIMAL(18,2), `Budgeted` DECIMAL(18,2), `total_budget_percent_budgeted` DECIMAL(18,2), `Invested` DECIMAL(18,2), `total_budget_percent_invested` DECIMAL(18,2), `Budget_invested_percent` VARCHAR(100));
+CREATE TABLE `endowment` (`endowment_id` DECIMAL(18,2), `School_id` DECIMAL(18,2), `donator_name` VARCHAR(100), `amount` DECIMAL(18,2));

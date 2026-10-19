@@ -1,0 +1,3 @@
+CREATE TABLE `routes` (`rid` DECIMAL(18,2), `dst_apid` DECIMAL(18,2), `dst_ap` VARCHAR(100), `src_apid` DECIMAL(18,2), `src_ap` VARCHAR(100), `alid` DECIMAL(18,2), `airline` VARCHAR(100), `codeshare` VARCHAR(100));
+CREATE TABLE `airports` (`apid` DECIMAL(18,2), `name` VARCHAR(100), `city` VARCHAR(100), `country` VARCHAR(100), `x` DECIMAL(18,2), `y` DECIMAL(18,2), `elevation` DECIMAL(18,2), `iata` VARCHAR(100), `icao` VARCHAR(100));
+CREATE TABLE `airlines` (`alid` DECIMAL(18,2), `name` VARCHAR(100), `iata` VARCHAR(100), `icao` VARCHAR(100), `callsign` VARCHAR(100), `country` VARCHAR(100), `active` VARCHAR(100));

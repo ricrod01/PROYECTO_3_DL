@@ -1,0 +1,10 @@
+CREATE TABLE `Addresses` (`address_id` DECIMAL(18,2), `line_1_number_building` VARCHAR(100), `town_city` VARCHAR(100), `zip_postcode` VARCHAR(100), `state_province_county` VARCHAR(100), `country` VARCHAR(100));
+CREATE TABLE `Services` (`service_id` DECIMAL(18,2), `service_type_code` VARCHAR(100), `service_name` VARCHAR(100), `service_descriptio` VARCHAR(100));
+CREATE TABLE `Forms` (`form_id` DECIMAL(18,2), `form_type_code` VARCHAR(100), `service_id` DECIMAL(18,2), `form_number` VARCHAR(100), `form_name` VARCHAR(100), `form_description` VARCHAR(100));
+CREATE TABLE `Individuals` (`individual_id` DECIMAL(18,2), `individual_first_name` VARCHAR(100), `individual_middle_name` VARCHAR(100), `inidividual_phone` VARCHAR(100), `individual_email` VARCHAR(100), `individual_address` VARCHAR(100), `individual_last_name` VARCHAR(100));
+CREATE TABLE `Organizations` (`organization_id` DECIMAL(18,2), `date_formed` DATETIME, `organization_name` VARCHAR(100), `uk_vat_number` VARCHAR(100));
+CREATE TABLE `Parties` (`party_id` DECIMAL(18,2), `payment_method_code` VARCHAR(100), `party_phone` VARCHAR(100), `party_email` VARCHAR(100));
+CREATE TABLE `Organization_Contact_Individuals` (`individual_id` DECIMAL(18,2), `organization_id` DECIMAL(18,2), `date_contact_from` DATETIME, `date_contact_to` DATETIME);
+CREATE TABLE `Party_Addresses` (`party_id` DECIMAL(18,2), `address_id` DECIMAL(18,2), `date_address_from` DATETIME, `address_type_code` VARCHAR(100), `date_address_to` DATETIME);
+CREATE TABLE `Party_Forms` (`party_id` DECIMAL(18,2), `form_id` DECIMAL(18,2), `date_completion_started` DATETIME, `form_status_code` VARCHAR(100), `date_fully_completed` DATETIME);
+CREATE TABLE `Party_Services` (`booking_id` DECIMAL(18,2), `customer_id` DECIMAL(18,2), `service_id` DECIMAL(18,2), `service_datetime` DATETIME, `booking_made_date` DATETIME);

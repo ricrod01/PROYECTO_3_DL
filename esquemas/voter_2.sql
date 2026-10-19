@@ -1,0 +1,2 @@
+CREATE TABLE `Student` (`StuID` DECIMAL(18,2), `LName` VARCHAR(100), `Fname` VARCHAR(100), `Age` DECIMAL(18,2), `Sex` VARCHAR(100), `Major` DECIMAL(18,2), `Advisor` DECIMAL(18,2), `city_code` VARCHAR(100));
+CREATE TABLE `Voting_record` (`StuID` DECIMAL(18,2), `Registration_Date` VARCHAR(100), `Election_Cycle` VARCHAR(100), `President_Vote` DECIMAL(18,2), `Vice_President_Vote` DECIMAL(18,2), `Secretary_Vote` DECIMAL(18,2), `Treasurer_Vote` DECIMAL(18,2), `Class_President_Vote` DECIMAL(18,2), `Class_Senator_Vote` DECIMAL(18,2));
