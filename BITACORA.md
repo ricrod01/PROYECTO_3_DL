@@ -148,6 +148,24 @@ Usando pytorch, su documentación e inteligencia artificial, se realizará el en
 
 ---
 
+### Actividad 7: [Datos propios]
+
+**Fecha de creación:** 20/10/2026
+
+#### Objetivo
+- Crear esquemas propios con los que se probará el modelo.
+
+#### Actividades a realizar
+1. Crear 2 esquemas de bases de datos sql, al menos con 5 tablas cada esquema.
+
+#### Herramientas utilizadas
+- MySQL 8.4.10
+
+#### Procedimiento
+Crear dos archivos sql que tenga la estructura de dos bases de datos.
+
+---
+
 
 ## 3. Resumen de avances
 
@@ -160,6 +178,8 @@ Usando pytorch, su documentación e inteligencia artificial, se realizará el en
 | 19/10/2026 | Ricardo | Actividad 3 | [Finalizada] | Se han cargado los datos de las fuentes y se han unido |
 | 19/10/2026 | Ian | Actividad 5 | [No iniciada] | No se ha iniciado. |
 | 19/10/2026 | Ricardo | Actividad 6 | [No iniciada] | No se ha iniciado. |
+| 20/10/2026 | Ian | Actividad 5 | [Finalizada] | Se corroboró las entradas que son aptas para MySQL 8.4.10. |
+| 20/10/2026 | Ian | Actividad 7 | [No iniciada] | No se ha iniciado |
 
 ---
 
