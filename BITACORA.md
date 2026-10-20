@@ -182,6 +182,7 @@ Crear dos archivos sql que tenga la estructura de dos bases de datos.
 | 20/10/2026 | Ian | Actividad 7 | [No iniciada] | No se ha iniciado. |
 | 20/10/2026 | Ricardo | Actividad 4 | [Finalizada] | Se arregló y se probó la carga del modelo. |
 | 20/10/2026 | Ricardo | Actividad 6 | [Avance] | Se tiene alrededor de la mitad del archivo. |
+| 20/10/2026 | Ricardo | Actividad 2 | [Avance] | Se hizo cambios en nombres de archivos y se creo el .json para cumplir con la arquitectura. |
 
 ---
 
