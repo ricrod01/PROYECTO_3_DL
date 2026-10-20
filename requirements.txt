@@ -18,3 +18,5 @@ mysql-connector-python>=9.2,<10
 python-dotenv==1.1.1
 sqlparse==0.5.3
 tqdm==4.67.1
+ipywidgets==8.1.8
+hf_xet==1.1.10

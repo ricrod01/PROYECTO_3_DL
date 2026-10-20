@@ -173,13 +173,15 @@ Crear dos archivos sql que tenga la estructura de dos bases de datos.
 |-------|-------------|-----------|--------|------------|
 | 16/10/2026 | Ian | Actividad 1 | [Preliminar] | Estos no son definitivos, pueden existir cambios según cambien los requerimientos. |
 | 16/10/2026 | Ricardo | Actividad 2 | [Preliminar] | Estos no son definitivos, pueden existir cambios según cambien los requerimientos. |
-| 16/10/2026 | Ricardo | Actividad 3 | [Avance] | Se ha descargado el conjunto de datos proporcionado por el LLM |
-| 16/10/2026 | Ricardo | Actividad 4 | [Preliminar] | El ejecutable está listo, pero no se ha probado |
-| 19/10/2026 | Ricardo | Actividad 3 | [Finalizada] | Se han cargado los datos de las fuentes y se han unido |
+| 16/10/2026 | Ricardo | Actividad 3 | [Avance] | Se ha descargado el conjunto de datos proporcionado por el LLM. |
+| 16/10/2026 | Ricardo | Actividad 4 | [Preliminar] | El ejecutable está listo, pero no se ha probado. |
+| 19/10/2026 | Ricardo | Actividad 3 | [Finalizada] | Se han cargado los datos de las fuentes y se han unido. |
 | 19/10/2026 | Ian | Actividad 5 | [No iniciada] | No se ha iniciado. |
 | 19/10/2026 | Ricardo | Actividad 6 | [No iniciada] | No se ha iniciado. |
 | 20/10/2026 | Ian | Actividad 5 | [Finalizada] | Se corroboró las entradas que son aptas para MySQL 8.4.10. |
-| 20/10/2026 | Ian | Actividad 7 | [No iniciada] | No se ha iniciado |
+| 20/10/2026 | Ian | Actividad 7 | [No iniciada] | No se ha iniciado. |
+| 20/10/2026 | Ricardo | Actividad 4 | [Finalizada] | Se arregló y se probó la carga del modelo. |
+| 20/10/2026 | Ricardo | Actividad 6 | [Avance] | Se tiene alrededor de la mitad del archivo. |
 
 ---
 
