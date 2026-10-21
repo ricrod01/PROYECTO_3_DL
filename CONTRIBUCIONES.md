@@ -9,5 +9,6 @@
 | Corroboración de datos | Ian Castellanos | |
 | Carga del modelo | Ricardo Rodríguez | `carga_modelo.py` |
 | Entrenamiento del modelo | Ricardo Rodríguez | |
-| Creación de datos propios | Ian Castellanos | |
+| Creación de datos propios | Ricardo Rodríguez | |
 | Medición de errores | Ian Castellanos | |
+| Presentación | Ian Castellanos | |

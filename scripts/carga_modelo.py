@@ -2,12 +2,14 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 
-def cargar_modelo(r=16):
+def cargar_modelo(r):
 
     modelo_id = 'Qwen/Qwen2.5-Coder-1.5B-Instruct'
 
     # Cuantización a 4 bits.
-    config_cuantizacion = BitsAndBytesConfig(load_in_8bit=True, llm_int8_threshold=6.0)
+    config_cuantizacion = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_quant_type="nf4",
+                                             bnb_4bit_compute_dtype=torch.float16,
+                                             bnb_4bit_use_double_quant=True)
 
     # Tokenizador.
     tokenizer = AutoTokenizer.from_pretrained(modelo_id)

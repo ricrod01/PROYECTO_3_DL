@@ -166,6 +166,24 @@ Crear dos archivos sql que tenga la estructura de dos bases de datos.
 
 ---
 
+### Actividad 8: [Presentación]
+
+**Fecha de creación:** 20/10/2026
+
+#### Objetivo
+- Realizar una presentación que resuma el proyecto.
+
+#### Actividades a realizar
+1. Realizar una presentación de máximo 12 diapositivas.
+
+#### Herramientas utilizadas
+- Power Point.
+
+#### Procedimiento
+Se observará todo el proyecto y se tomará decisiones sobre que incluir en la presentación.
+
+---
+
 
 ## 3. Resumen de avances
 
@@ -183,6 +201,10 @@ Crear dos archivos sql que tenga la estructura de dos bases de datos.
 | 20/10/2026 | Ricardo | Actividad 4 | [Finalizada] | Se arregló y se probó la carga del modelo. |
 | 20/10/2026 | Ricardo | Actividad 6 | [Avance] | Se tiene alrededor de la mitad del archivo. |
 | 20/10/2026 | Ricardo | Actividad 2 | [Avance] | Se hizo cambios en nombres de archivos y se creo el .json para cumplir con la arquitectura. |
+| 20/10/2026 | Ricardo | Actividad 7 | [No iniciada] | Se cambió al responsable. |
+| 20/10/2026 | Ian | Actividad 8 | [No iniciada] | No se ha iniciado. |
+| 20/10/2026 | Ricardo | Actividad 4 | [Finalizada] | Se decidió cambiar a 4 bits por temas de eficiencia. |
+| 20/10/2026 | Ricardo | Actividad 6 | [Finalizada] | Se entrenaron las dos configuraciones de LoRA. |
 
 ---
 
