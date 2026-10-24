@@ -205,6 +205,7 @@ Se observará todo el proyecto y se tomará decisiones sobre que incluir en la p
 | 20/10/2026 | Ian | Actividad 8 | [No iniciada] | No se ha iniciado. |
 | 20/10/2026 | Ricardo | Actividad 4 | [Finalizada] | Se decidió cambiar a 4 bits por temas de eficiencia. |
 | 20/10/2026 | Ricardo | Actividad 6 | [Finalizada] | Se entrenaron las dos configuraciones de LoRA. |
+| 24/10/2026 | Ricardo | Actividad 7 | [Finalizada] | Se generó el conjunto de validación propio. |
 
 ---
 
