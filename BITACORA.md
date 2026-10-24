@@ -184,6 +184,29 @@ Se observará todo el proyecto y se tomará decisiones sobre que incluir en la p
 
 ---
 
+### Actividad 9: [Análisis de errores]
+
+**Fecha de creación:** 24/10/2026
+
+#### Objetivo
+- Analizar la efectividad de los modelos en el conjunto de validación.
+
+#### Actividades a realizar
+1. Medir los errores de los modelos y los Adapters con el conjunto de validación.
+2. Categorizar los errores del mejor modelo-Adapter con el conjunto de validación.
+3. Realizar un experimento de inferencia.
+
+#### Herramientas utilizadas
+- JupyterNotebook
+- Docker
+- MySQL 8.4.10
+
+#### Procedimiento
+Se medirán los errores del modelo base y con cada adapter, luego se categorizarán los errores del mejor modelo-Adapter y por último un experimento de inferencia.
+
+---
+
+
 
 ## 3. Resumen de avances
 
@@ -206,6 +229,7 @@ Se observará todo el proyecto y se tomará decisiones sobre que incluir en la p
 | 20/10/2026 | Ricardo | Actividad 4 | [Finalizada] | Se decidió cambiar a 4 bits por temas de eficiencia. |
 | 20/10/2026 | Ricardo | Actividad 6 | [Finalizada] | Se entrenaron las dos configuraciones de LoRA. |
 | 24/10/2026 | Ricardo | Actividad 7 | [Finalizada] | Se generó el conjunto de validación propio. |
+| 24/10/2026 | Ian | Actividad 9 | [Finalizada] | Se hizo todo el análisis de errores. |
 
 ---
 
