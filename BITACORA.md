@@ -206,7 +206,23 @@ Se medirán los errores del modelo base y con cada adapter, luego se categorizar
 
 ---
 
+### Actividad 10: [Solución]
 
+**Fecha de creación:** 24/10/2026
+
+#### Objetivo
+- Generar el archivo de solución.
+
+#### Actividades a realizar
+1. Archivo de solución.
+
+#### Herramientas utilizadas
+- Python
+
+#### Procedimiento
+Crear el código con ayuda de IA, para poder generar el contrato de entrega.
+
+---
 
 ## 3. Resumen de avances
 
@@ -230,11 +246,12 @@ Se medirán los errores del modelo base y con cada adapter, luego se categorizar
 | 20/10/2026 | Ricardo | Actividad 6 | [Finalizada] | Se entrenaron las dos configuraciones de LoRA. |
 | 24/10/2026 | Ricardo | Actividad 7 | [Finalizada] | Se generó el conjunto de validación propio. |
 | 24/10/2026 | Ian | Actividad 9 | [Finalizada] | Se hizo todo el análisis de errores. |
+| 24/10/2026 | Ricardo | Actividad 10 | [Finalizada] | Se sube el código completo, pero se probará en Colab. |
 
 ---
 
 ## 4. Conclusiones
-
+Este proyecto ha sido muy retador y educativo. Creo que es el mejor proyecto que se ha realizado y el que más útil nos será en el futuro en caso nos dediquemos al mundo del DeepLearning.
 
 
 ## 5. Referencias y recursos

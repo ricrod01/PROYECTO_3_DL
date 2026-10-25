@@ -12,3 +12,4 @@
 | Creación de datos propios | Ricardo Rodríguez | `tenis_mesa.sql`, `sales_clothes.sql`, `esquemas_propios.ipynb` |
 | Medición de errores | Ian Castellanos | `analisis_errores.ipynb`, `consulta_sql.py`, `funcion_ex.py`, `inferencia.py` |
 | Presentación | Ian Castellanos | |
+| Solución | Ricardo Rodríguez | `solucion.py`, `config.json`, `prueba_solucion.ipynb` |
