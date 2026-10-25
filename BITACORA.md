@@ -247,6 +247,7 @@ Crear el código con ayuda de IA, para poder generar el contrato de entrega.
 | 24/10/2026 | Ricardo | Actividad 7 | [Finalizada] | Se generó el conjunto de validación propio. |
 | 24/10/2026 | Ian | Actividad 9 | [Finalizada] | Se hizo todo el análisis de errores. |
 | 24/10/2026 | Ricardo | Actividad 10 | [Finalizada] | Se sube el código completo, pero se probará en Colab. |
+| 24/10/2026 | Ian | Actividad 8 | [Finalizada] | Se realizó la presentación. |
 
 ---
 
