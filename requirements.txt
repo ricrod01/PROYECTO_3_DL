@@ -1,4 +1,4 @@
-torch==2.5.1
+torch>=2.5.1
 transformers==4.51.3
 accelerate==1.6.0
 peft==0.15.2
@@ -6,7 +6,8 @@ bitsandbytes==0.45.5
 datasets==3.6.0
 huggingface-hub==0.30.2
 safetensors==0.5.3
-numpy==1.26.4
+numpy==1.26.4; python_version < "3.13"
+numpy>=2.1.3,<3; python_version >= "3.13"
 pyarrow==19.0.1
 pandas==2.2.3
 scikit-learn==1.6.1
